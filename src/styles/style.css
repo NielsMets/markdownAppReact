@@ -1,0 +1,20 @@
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: green;
+  gap: 1em;
+}
+
+.App section {
+  width: 50%;
+}
+
+.App section textarea {
+  width: 100%;
+}
+
+.App section h2 {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

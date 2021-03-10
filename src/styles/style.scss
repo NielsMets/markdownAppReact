@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+  background-color: green;
+  gap: 1em;
+  section {
+    width: 50%;
+    textarea {
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+}
