@@ -1,39 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+// import "./styles/reset.css";
 import "./styles/style.css";
+import marked from "marked";
 
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: "",
-    };
-  }
+function App() {
+  const [input, setInput] = useState("# yooo waddup \n## this works");
 
-  handleChange(input) {
-    this.setState({ input });
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <section>
-          <h2>Input</h2>
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="10"
-            value={this.state.input}
-            onChange={(e) => {
-              this.handleChange(e.target.value);
-            }}
-          ></textarea>
-        </section>
-        <section>
-          <h2>output</h2>
-          <div className="output">{this.state.input}</div>
-        </section>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Input input={input} setInput={setInput} />
+      <Output input={input} />
+    </div>
+  );
 }
+
+function Input({ input, setInput }) {
+  const handleChange = (input) => {
+    setInput(input);
+  };
+
+  return (
+    <section>
+      <h2 className="section-heading">Input</h2>
+      <textarea
+        className="input"
+        name="input"
+        cols="30"
+        rows="50"
+        value={input}
+        onChange={(e) => {
+          handleChange(e.target.value);
+        }}
+      ></textarea>
+    </section>
+  );
+}
+
+function Output({ input }) {
+  return (
+    <section>
+      <h2 className="section-heading">output</h2>
+      <div
+        className="output"
+        dangerouslySetInnerHTML={{ __html: marked(input) }}
+      ></div>
+    </section>
+  );
+}
+
+export default App;
