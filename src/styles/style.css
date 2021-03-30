@@ -1,20 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: roboto;
+  margin: 0;
+  padding: 0;
+  background: #dcf2e2;
+}
+
 .App {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 4em;
+  max-width: 1640px;
+  padding: 0 2em;
+  margin: auto;
+}
+
+.section-heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: green;
-  gap: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.App section {
-  width: 50%;
+.section-heading button {
+  background-color: blue;
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  height: 3em;
+  width: 6em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.App section textarea {
+.section-heading button:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.output,
+.input {
+  height: 100%;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  word-break: break-all;
+  padding: 1em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.input {
   width: 100%;
+  border: 0;
+  resize: none;
 }
 
-.App section h2 {
-  text-align: center;
+.output {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #ecf9f0;
+  color: #545454;
+}
+
+.output h1,
+.output h2,
+.output h3 {
+  margin-top: 0;
+}
+
+.output h1 {
+  font-size: 30pt;
+}
+
+.output h2 {
+  font-size: 20pt;
+}
+
+.output h3 {
+  font-size: 15pt;
 }
 /*# sourceMappingURL=style.css.map */

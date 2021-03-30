@@ -1,14 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+$bg: #dcf2e2;
+$primary: blue;
+$output: #ecf9f0;
+$output-text: #545454;
+
+$shadow1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow2: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+$shadow3: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+body {
+  font-family: roboto;
+  margin: 0;
+  padding: 0;
+  background: $bg;
+}
+
 .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4em;
+  max-width: 1640px;
+  padding: 0 2em;
+  margin: auto;
+}
+
+.section-heading {
   display: flex;
-  background-color: green;
-  gap: 1em;
-  section {
-    width: 50%;
-    textarea {
-      width: 100%;
+  justify-content: space-between;
+  button {
+    background-color: $primary;
+    color: white;
+    border: none;
+    box-shadow: $shadow2;
+    height: 3em;
+    width: 6em;
+    align-self: center;
+    &:hover {
+      box-shadow: $shadow3;
     }
-    h2 {
-      text-align: center;
-    }
+  }
+}
+
+.output,
+.input {
+  height: 100%;
+  box-shadow: $shadow1;
+  word-break: break-all;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.input {
+  width: 100%;
+  border: 0;
+  resize: none;
+}
+
+.output {
+  box-sizing: border-box;
+  background-color: $output;
+  color: $output-text;
+  h1,
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 30pt;
+  }
+  h2 {
+    font-size: 20pt;
+  }
+  h3 {
+    font-size: 15pt;
   }
 }
