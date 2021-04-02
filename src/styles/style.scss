@@ -2,12 +2,18 @@
 
 $bg: #dcf2e2;
 $primary: blue;
+$primary-hover: rgb(2, 2, 221);
+$primary-focus: rgb(61, 61, 255);
 $output: #ecf9f0;
 $output-text: #545454;
 
 $shadow1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 $shadow2: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 $shadow3: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+html {
+  font-size: 10pt;
+}
 
 body {
   font-family: roboto;
@@ -18,11 +24,15 @@ body {
 
 .App {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4em;
   max-width: 1640px;
-  padding: 0 2em;
   margin: auto;
+  section {
+    box-sizing: border-box;
+    display: flex;
+    height: 50vh;
+    flex-direction: column;
+    padding: 0 1em 1em 1em;
+  }
 }
 
 .section-heading {
@@ -33,22 +43,31 @@ body {
     color: white;
     border: none;
     box-shadow: $shadow2;
-    height: 3em;
-    width: 6em;
+    height: 2.5em;
+    width: 5em;
     align-self: center;
+    &:focus {
+      outline: 0;
+      background-color: $primary-focus;
+    }
     &:hover {
       box-shadow: $shadow3;
+      background-color: $primary-hover;
+      transform: scale(1.01);
     }
   }
 }
 
 .output,
 .input {
-  height: 100%;
   box-shadow: $shadow1;
   word-break: break-all;
   padding: 1em;
   box-sizing: border-box;
+  flex-grow: 1;
+  &:focus {
+    outline: 0;
+  }
 }
 
 .input {
@@ -67,12 +86,45 @@ body {
     margin-top: 0;
   }
   h1 {
-    font-size: 30pt;
+    font-size: 3rem;
   }
   h2 {
-    font-size: 20pt;
+    font-size: 2rem;
   }
   h3 {
-    font-size: 15pt;
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  table {
+    border-collapse: collapse;
+    th,
+    td {
+      border: 1px solid black;
+      padding: 0.3em;
+      text-align: left;
+    }
+  }
+  pre {
+    background-color: white;
+    box-shadow: $shadow1;
+    padding: 1em;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 12pt;
+  }
+
+  .App {
+    grid-template-columns: 1fr 1fr;
+    section {
+      height: 75vh;
+      padding: 0 2em 0 2em;
+    }
   }
 }

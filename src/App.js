@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./styles/style.css";
 import Input from "./components/Input";
 import Output from "./components/Output";
+import text from "./text.js";
 
 function App() {
-  const inputDefault = "# yooo waddup \n## this works";
+  const inputDefault = text;
   const [input, setInput] = useState(inputDefault);
 
   return (

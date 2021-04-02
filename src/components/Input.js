@@ -16,8 +16,6 @@ function Input({ input, setInput, inputDefault }) {
       <textarea
         className="input"
         name="input"
-        cols="30"
-        rows="50"
         value={input}
         onChange={(e) => {
           handleChange(e.target.value);
