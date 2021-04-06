@@ -72,6 +72,7 @@ body {
 
 .input {
   width: 100%;
+  height: 100%;
   border: 0;
   resize: none;
 }
@@ -123,7 +124,7 @@ body {
   .App {
     grid-template-columns: 1fr 1fr;
     section {
-      height: 75vh;
+      height: 90vh;
       padding: 0 2em 0 2em;
     }
   }
