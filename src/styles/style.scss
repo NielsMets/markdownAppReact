@@ -29,7 +29,7 @@ body {
   section {
     box-sizing: border-box;
     display: flex;
-    height: 50vh;
+    height: 75vh;
     flex-direction: column;
     padding: 0 1em 1em 1em;
   }
@@ -124,8 +124,8 @@ body {
   .App {
     grid-template-columns: 1fr 1fr;
     section {
-      height: 90vh;
       padding: 0 2em 0 2em;
+      height: auto;
     }
   }
 }
