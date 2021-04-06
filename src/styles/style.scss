@@ -123,7 +123,7 @@ body {
   .App {
     grid-template-columns: 1fr 1fr;
     section {
-      height: 75vh;
+      height: auto;
       padding: 0 2em 0 2em;
     }
   }
