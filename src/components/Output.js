@@ -1,6 +1,6 @@
 import marked from "marked";
 
-function Output({ input }) {
+const Output = ({ input }) => {
   return (
     <section>
       <div className="section-heading">
@@ -12,6 +12,6 @@ function Output({ input }) {
       ></div>
     </section>
   );
-}
+};
 
 export default Output;

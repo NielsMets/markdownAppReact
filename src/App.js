@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import "./styles/style.css";
 import Input from "./components/Input";
 import Output from "./components/Output";
-import text from "./text.js";
+import { inputDefault } from "./data/inputDefault";
 
-function App() {
-  const inputDefault = text;
+const App = () => {
   const [input, setInput] = useState(inputDefault);
 
   return (
@@ -14,6 +13,6 @@ function App() {
       <Output input={input} />
     </div>
   );
-}
+};
 
 export default App;

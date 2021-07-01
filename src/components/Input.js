@@ -1,4 +1,4 @@
-function Input({ input, setInput, inputDefault }) {
+const Input = ({ input, setInput, inputDefault }) => {
   const handleChange = (input) => {
     setInput(input);
   };
@@ -23,6 +23,6 @@ function Input({ input, setInput, inputDefault }) {
       ></textarea>
     </section>
   );
-}
+};
 
 export default Input;
